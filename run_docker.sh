@@ -4,7 +4,7 @@
 
 # Step 1:
 # Build image and add a descriptive tag
-docker built -t ml-app .
+docker build -t ml-app .
 
 # Step 2: 
 # List docker images

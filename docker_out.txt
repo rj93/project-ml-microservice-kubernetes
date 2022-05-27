@@ -1,0 +1,62 @@
+(.devops) bash-3.2$ ./run_docker.sh
+[+] Building 182.7s (9/9) FINISHED
+ => [internal] load build definition from Dockerfile                                                                                                                                                              0.0s
+ => => transferring dockerfile: 485B                                                                                                                                                                              0.0s
+ => [internal] load .dockerignore                                                                                                                                                                                 0.0s
+ => => transferring context: 2B                                                                                                                                                                                   0.0s
+ => [internal] load metadata for docker.io/library/python:3.7.3-stretch                                                                                                                                           2.6s
+ => [1/4] FROM docker.io/library/python:3.7.3-stretch@sha256:205cafadbb7f0c48f2a6d655eb100a9675aa85e6e73958860f488406cce09779                                                                                   104.4s
+ => => resolve docker.io/library/python:3.7.3-stretch@sha256:205cafadbb7f0c48f2a6d655eb100a9675aa85e6e73958860f488406cce09779                                                                                     0.0s
+ => => sha256:205cafadbb7f0c48f2a6d655eb100a9675aa85e6e73958860f488406cce09779 1.65kB / 1.65kB                                                                                                                    0.0s
+ => => sha256:e3e087ca7fe013554b3a8b8d4088ab33a9f13af85b5c3f37cd4e69a8e53f14e1 2.22kB / 2.22kB                                                                                                                    0.0s
+ => => sha256:494c27a8a6b820f9167ec7e368b3a9bb47d7029f4dc8c97c67091f3757a5bc4e 10.79MB / 10.79MB                                                                                                                  8.1s
+ => => sha256:34a518642c76e77f0cace72bd993352ac99802c3295931f70a407b735ecb6e27 7.39kB / 7.39kB                                                                                                                    0.0s
+ => => sha256:6f2f362378c5a6fd915d96d11dda1e0223ccf213bf121ace56ae0f6616ea1dc8 45.34MB / 45.34MB                                                                                                                 39.8s
+ => => sha256:7596bb83081b6c8410df557d538a0ae45922cbf81e469c6f4cfa835247cb24ab 4.34MB / 4.34MB                                                                                                                   20.0s
+ => => sha256:372744b62d49eba993652ee4a1201801fe278b687d85489101e07e7b9a4900e0 50.07MB / 50.07MB                                                                                                                 26.5s
+ => => sha256:615db220d76c063138a2e6c5849703a7a80d682a682f7e1a841e6e7ed5f43879 215.08MB / 215.08MB                                                                                                               90.3s
+ => => sha256:39aa0c89bda1ee16e94ab7039cb0b9a9fce8a390769c2194aaf5fdf0ae1a2bdd 5.83MB / 5.83MB                                                                                                                   28.4s
+ => => sha256:ac275157d894bedd09171a43b2b24ee6e7587a9544a1eae42ef2ea6b60584100 22.48MB / 22.48MB                                                                                                                 35.7s
+ => => sha256:98d16dec829a865dcb9bad110c7f1fc04ceecb52cb00f4b37f85b592aa68089d 239B / 239B                                                                                                                       36.4s
+ => => sha256:c8514b1c6524ef491c388ca3114b7f7e969e0e7507ea9efac08e663b982ec5d1 1.82MB / 1.82MB                                                                                                                   37.7s
+ => => extracting sha256:6f2f362378c5a6fd915d96d11dda1e0223ccf213bf121ace56ae0f6616ea1dc8                                                                                                                         2.1s
+ => => extracting sha256:494c27a8a6b820f9167ec7e368b3a9bb47d7029f4dc8c97c67091f3757a5bc4e                                                                                                                         0.4s
+ => => extracting sha256:7596bb83081b6c8410df557d538a0ae45922cbf81e469c6f4cfa835247cb24ab                                                                                                                         0.2s
+ => => extracting sha256:372744b62d49eba993652ee4a1201801fe278b687d85489101e07e7b9a4900e0                                                                                                                         2.5s
+ => => extracting sha256:615db220d76c063138a2e6c5849703a7a80d682a682f7e1a841e6e7ed5f43879                                                                                                                        11.8s
+ => => extracting sha256:39aa0c89bda1ee16e94ab7039cb0b9a9fce8a390769c2194aaf5fdf0ae1a2bdd                                                                                                                         0.3s
+ => => extracting sha256:ac275157d894bedd09171a43b2b24ee6e7587a9544a1eae42ef2ea6b60584100                                                                                                                         1.0s
+ => => extracting sha256:98d16dec829a865dcb9bad110c7f1fc04ceecb52cb00f4b37f85b592aa68089d                                                                                                                         0.0s
+ => => extracting sha256:c8514b1c6524ef491c388ca3114b7f7e969e0e7507ea9efac08e663b982ec5d1                                                                                                                         0.2s
+ => [internal] load build context                                                                                                                                                                                 0.1s
+ => => transferring context: 1.66MB                                                                                                                                                                               0.1s
+ => [2/4] WORKDIR /app                                                                                                                                                                                            1.3s
+ => [3/4] COPY . app.py /app/                                                                                                                                                                                     0.1s
+ => [4/4] RUN pip install --upgrade pip &&    pip install --trusted-host pypi.python.org -r requirements.txt                                                                                                     71.8s
+ => exporting to image                                                                                                                                                                                            2.3s
+ => => exporting layers                                                                                                                                                                                           2.3s
+ => => writing image sha256:6b66e149c3a1ccfd47c9b6f8c67849fdfdd34286e35e247c4ceb0e301bd80cfe                                                                                                                      0.0s
+ => => naming to docker.io/library/ml-app                                                                                                                                                                         0.0s
+
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+REPOSITORY                                                                            TAG                                                     IMAGE ID       CREATED         SIZE
+ml-app                                                                                latest                                                  6b66e149c3a1   3 seconds ago   1.26GB
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 336-439-442
+[2022-05-27 08:50:30,253] INFO in app: JSON payload:
+{'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
+[2022-05-27 08:50:30,266] INFO in app: Inference payload DataFrame:
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2022-05-27 08:50:30,275] INFO in app: Scaling Payload:
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2022-05-27 08:50:30,278] INFO in app: Prediction: [20.35373177134412]
+172.17.0.1 - - [27/May/2022 08:50:30] "POST /predict HTTP/1.1" 200 -

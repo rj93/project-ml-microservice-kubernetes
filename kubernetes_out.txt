@@ -1,0 +1,7 @@
+(.devops) bash-3.2$ ./run_kubernetes.sh
+deployment.apps/ml-app created
+NAME                      READY   STATUS              RESTARTS   AGE
+ml-app-5464c9fd64-22chl   0/1     ContainerCreating   0          1s
+waiting for pod
+Forwarding from 0.0.0.0:8000 -> 80
+Handling connection for 8000

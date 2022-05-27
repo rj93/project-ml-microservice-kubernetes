@@ -17,5 +17,6 @@ pod=$(kubectl get pods -o jsonpath='{.items[*].metadata.name}')
 
 # Step 4:
 # Forward the container port to a host
+while [[ $(kubectl get pods $pod -o 'jsonpath={..status.conditions[?(@.type=="Ready")].status}') != "True" ]]; do echo "waiting for pod" && sleep 30; done
 kubectl port-forward pod/"$pod" --address 0.0.0.0 8000:80
 
